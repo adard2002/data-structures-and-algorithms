@@ -133,6 +133,21 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  const arrayList = [];
+  // const we can declare as a const because it is not reassigned, we could have used let as well with no increase in the cost of system resources.
+  // availableItems.forEach((value, index, array){
+  // it is a function the forEach takes a function as it's parameter 
+  // the value is comprised of the objects above, it is made up of key value attributes.
+  // });
+
+  availableItems.forEach( fruitInventory => {
+    if(fruitInventory.available === true){
+      // arrayList.push(fruitInventory);
+      arrayList.push(fruitInventory.name);
+    }
+  });
+
+  return arrayList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -151,6 +166,18 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  const fizzCallBack = (value, index, array) => {
+    if(number % 3 === 0 ){
+      outputArray.push('buzz');
+      //we have to move this so that it checks these conditions first, then check the other confditions
+    }else if(number % 3 === 0 && number % 5 === 0){
+      outputArray.push('fizz buzz');
+    }else {
+      outputArray.push(number);
+    }
+  arr.forEach(fizzCallBack);
+  console.log(outputArray);
+  return outputArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
