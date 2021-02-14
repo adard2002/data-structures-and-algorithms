@@ -108,7 +108,8 @@ const addValues = (arr, value) => {
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
   while (arr.length < times){
-    arr.push(num);
+    callback(arr,num);
+    // this grabs the first object in the first const and the first object in the 2nd const addNumbers? and changed the arr that was in place of the callback. So callback is not just defined, but is also used.
   }
   return arr;
 };
@@ -133,7 +134,20 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  // this is going through the array
+  const newList = [];
+  // this going through each item in the availableItems array
+  availableItems.forEach(value => {
+    // if the item is available it it strictly equal to true:
+    if(value.available === true){
+      // that items name will be pushed and will show on the console on the page.
+      newList.push(value.name);
+    }
+  });
+  return newList;
 };
+// I did look at someones code but it does make complete sense to me now as to what they had and how it works. Was a big ahah moment lol.
+
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
