@@ -165,6 +165,10 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  const newFizzBuzz = [];
+  arr.forEach(value => {
+    if(value.)
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
