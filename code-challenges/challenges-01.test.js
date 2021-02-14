@@ -167,7 +167,17 @@ const fizzbuzz = (arr) => {
   // Solution code here...
   const newFizzBuzz = [];
   arr.forEach(value => {
-    if(value.)
+    if(value.divisible === 3){
+      newFizzBuzz.push('Fizz');
+    } else {
+      if(value.divisible === 5){
+        newFizzBuzz.push('Buzz');
+      } else {
+        if(value.divisible === 3 || value.divisible === 5){
+          newFizzBuzz.push('Fizz Buzz');
+        }
+      }
+    }
   });
 };
 
