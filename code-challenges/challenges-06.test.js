@@ -56,8 +56,7 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
-  const newCharArr = Object.keys(characters);
-  newCharArr.forEach(characterArr => console.log('hello ' + characterArr)
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,6 +73,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   // Solution code here...
+  return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -86,19 +86,24 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  for( let property in obj){
+    // console.log(property);
+    if (obj[property] === value) return true;
+    else return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You are given an object with names and their coresponding phone numbers that looks like this: 
+You are given an object with names and their coresponding phone numbers that looks like this:
 {
   'Grace Hopper': '222-303-5938',
   'Ada Lovelace': '222-349-9842',
   'Alan Turing': '222-853-5933'
 }
 
-HR has asked you to change the data to make it easier to print so that it looks like this: 
+HR has asked you to change the data to make it easier to print so that it looks like this:
 [
   'Grace Hopper: 222-303-5938',
   'Ada Lovelace: 222-349-9842',
@@ -109,6 +114,11 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  const newObj = [];
+  for (let i = 0; i < Object.entries(obj).length; i++) {
+    newObj.push(Object.keys(obj)[i] + ': ' + Object.values(obj)[i]);
+  }
+  return newObj;
 };
 
 
