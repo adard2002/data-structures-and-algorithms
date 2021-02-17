@@ -9,9 +9,9 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
-  let newArray = str.split('');
-  return newArray.filter( (val,index) => {
-    return index > (newArray.length -(10+1));
+  let newStr = str.split('');
+  return newStr.filter( (val,index) => { // needs to which one you are testing for or trying to grab. in this case we are only looking for the index.
+    return index > (newStr.length -(10+1));
   });
 }
 
@@ -40,6 +40,9 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  return arr.filter( (val,index) => { // loooking for val since we are looking for words or letters rather than numbers.
+    return /and/.test(val); // tests every val for the word/letters and
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +55,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
