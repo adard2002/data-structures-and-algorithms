@@ -55,7 +55,11 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-
+  const newArr = arr;
+  if (newArr % 2 === 1)
+    return true;
+  else
+    return false;
 };
 
 /* ------------------------------------------------------------------------------------------------

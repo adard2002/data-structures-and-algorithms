@@ -21,6 +21,7 @@ Becomes:
 function transformToLis(obj){
   // Solution code here...
 
+  const obj = [];
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,8 +51,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+
   const newArr = [];
   return newArr.reduce((a,b) => (a + b)) / newArr.length;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,6 +132,7 @@ const returnNames = (arr) => {
     return acc;
   }, []);
   return names;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -146,6 +150,7 @@ const reversedString = (str) => {
     return val + acc;
   }, '');
   return reversedString;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -204,6 +209,7 @@ const countNumberOfChildren = (arr) => {
     return acc;
   }, []);
   return children;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
