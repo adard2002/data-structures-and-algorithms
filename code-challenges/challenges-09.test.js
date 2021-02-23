@@ -20,6 +20,7 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+
   const obj = [];
 }
 
@@ -32,6 +33,8 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+  const newArr = arr.reduce((acc, value) => acc + value, 0);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +51,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+
+  const newArr = [];
+  return newArr.reduce((a,b) => (a + b)) / newArr.length;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,11 +126,14 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
+
+  // Solution code here...
   const names = starWarsData.reduce((acc, val, idx) => {
     acc.push(val.name);
     return acc;
   }, []);
   return names;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -141,6 +151,10 @@ const reversedString = (str) => {
     return val + acc
   }, '')
   return reversedString;
+    return val + acc;
+  }, '');
+  return reversedString;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -194,6 +208,12 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  const children = characters.reduce((acc, val, idx) => {
+    acc.push(val.children);
+    return acc;
+  }, []);
+  return children;
+
 };
 
 /* ------------------------------------------------------------------------------------------------

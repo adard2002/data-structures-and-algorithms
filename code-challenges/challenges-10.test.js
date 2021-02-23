@@ -63,6 +63,7 @@ const totalSum = (input) => {
     return a + b;
   }, 0);
   return sum;
+  [].reduce((value, index) => value + index);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,6 +81,8 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
   const newInput = [[]];
+
+  Array.reject{|a| a % 3 == 0}
 
 };
 
@@ -156,6 +159,10 @@ let findMaleAndFemale = (data) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 6 
 
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */
