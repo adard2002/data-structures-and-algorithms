@@ -126,6 +126,7 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
+
   // Solution code here...
   const names = starWarsData.reduce((acc, val, idx) => {
     acc.push(val.name);
@@ -147,6 +148,9 @@ const reversedString = (str) => {
   // Solution code here...
   const array = str.split('');
   const reversedString = array.reduce((acc, val) => {
+    return val + acc
+  }, '')
+  return reversedString;
     return val + acc;
   }, '');
   return reversedString;

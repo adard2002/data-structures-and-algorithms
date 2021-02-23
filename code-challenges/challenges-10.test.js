@@ -58,6 +58,11 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  var newInput = [];
+  const sum = newInput.reduce(function(a, b) {
+    return a + b;
+  }, 0);
+  return sum;
   [].reduce((value, index) => value + index);
 };
 
@@ -76,12 +81,13 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
   const newInput = [[]];
+
   Array.reject{|a| a % 3 == 0}
 
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named findMaleAndFemale that, given the Star Wars data, below,
 returns the names of the characters whose gender is either male or female.
@@ -144,6 +150,15 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  if (data === 'female') {
+    return ('Leia Oragana.');
+  } else if (data === 'male') {
+    return ('Luke Skywalker, C-3PO, R2D2 and Darth Vader.');
+  }
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 6
 };
 
 /* ------------------------------------------------------------------------------------------------
