@@ -38,7 +38,7 @@ CHALLENGE 3
 
 Write a function named totalSum that takes in a matrix of numbers and returns the totalSum of all the numbers.
 
-For example: 
+For example:
 [
   [1, 3, 4, 5],
   [4, 5, 1],
@@ -76,7 +76,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-
+  let totalSale = [];
+  for (let i = 0; i < hoursOpen.length; i++) {
+    let acc = 0;
+    for (let j = 0; j < stores.length; j++) {
+      acc = acc + stores[j][i];
+    }
+    totalSale.push(acc);
+  }
+  return totalSale;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,6 +130,15 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let treatAmount = 0;
+  arr.forEach(store => {
+    store.items.forEach(item => {
+      if (item.name === 'Treats') {
+        treatAmount += item.quantity;
+      }
+    });
+  });
+  return treatAmount;
 };
 
 /* ------------------------------------------------------------------------------------------------
